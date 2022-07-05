@@ -14,25 +14,29 @@ describe ' viewing the next turn for a grid of cells' do
             expect(grid[1].length).to eq(3)
             expect(grid[2].length).to eq(3)
         end
-        it 'is empty' do
+        it 'is has numbers' do
+            #expect(grid[0][0].kind_of?(Integer)).to be(true)
+            #expect(grid[1][1].kind_of?(Integer)).to be(true)
             for a in 0..grid.length do    # a = will loop through the first array
                 for b in 0..grid.length do  # b = will loop through the second array
-                    expect(grid[a][b]).to eq 1
+                    expect(grid[a][b].kind_of?(Integer)).to be(true)
                 end
             end
         end
     end 
     describe ' player input' do
         it 'receives player input-refactor' do
-                #grid = grid.new 
+                 #grid = grid.new 
                 $stdin = StringIO.new('5')
                 expect(grid.player_input).to eq(grid[2][1])
         end
-            
-        it 'receives player input-refactor' do
-            #grid = grid.new 
-            $stdin = StringIO.new('1')
-            expect(grid.player_input).to eq(grid[0][0])
-        end
-    end  
-end
+    end    
+end   
+#         it 'receives player input-refactor' do
+#             #grid = grid.new 
+#             $stdin = StringIO.new('1')
+#             expect(grid.player_input).to eq(grid[0][0])
+#         end
+#     end  
+
+

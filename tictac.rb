@@ -7,7 +7,10 @@ def grid
 end
 
 def player_input()
+    puts "Choose your number from 1 to 9"
     input = $stdin.gets.chomp
+    grid[a][b]= input
 end
+ 
 
-#check how to put the user input in the grid/array 
+
